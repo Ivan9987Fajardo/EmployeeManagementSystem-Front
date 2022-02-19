@@ -1,0 +1,86 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*",
+    "*.spec.ts"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json",
+          "e2e/tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "plugins": ["rxjs-angular"],
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:jsdoc/recommended"
+      ],
+      "rules": {
+        "eqeqeq": "error",
+        "rxjs-angular/prefer-takeuntil": "error",
+        "jsdoc/require-description": 1,
+        "jsdoc/require-jsdoc": [1, {"checkConstructors":false, "contexts": ["MethodDefinition"] }],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "prefix": "app",
+            "style": "kebab-case",
+            "type": "element"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "prefix": "app",
+            "style": "camelCase",
+            "type": "attribute"
+          }
+        ],
+        "@typescript-eslint/explicit-function-return-type": ["error"],
+        "@typescript-eslint/unbound-method": ["off"],
+        "@typescript-eslint/prefer-readonly": ["error"],
+        // "@typescript-eslint/valid-jsdoc": ["error"],
+        "@typescript-eslint/no-extra-parens": ["error"],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          { "selector": "default", "format": ["camelCase"] },
+          {
+            "selector": "variable",
+            "types": ["boolean"],
+            "format": ["PascalCase"],
+            "prefix": ["is", "should", "has", "can", "did", "will"]
+          },
+          {
+            "selector": "memberLike",
+            "modifiers": ["private"],
+            "format": ["camelCase"],
+            "leadingUnderscore": "require"
+          },
+          {
+            "selector": "typeLike",
+            "format": ["PascalCase"]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}
