@@ -1,0 +1,20 @@
+#sidebar {
+    height:calc(100vh - 62.5px);
+    width: 4.5rem;
+    position: absolute;
+    left: 0;
+    border-right: 1px solid var(--bs-custom-1);
+}
+
+.bi {
+    font-size: 24px;
+}
+
+#initial {
+    background-color: var(--bs-custom-1);
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    text-align: center;
+}

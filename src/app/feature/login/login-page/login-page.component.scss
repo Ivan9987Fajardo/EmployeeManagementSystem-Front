@@ -1,20 +1,25 @@
 #sideContainer {
-    background-image: linear-gradient(to right, var(--bs-custom-1) , var(--bs-custom-2));;
+    background-image: linear-gradient(to right, var(--bs-custom-1) , var(--bs-custom-2));
+    position: relative;
     
 }
 
+
 #mainContainer {
-    
+    position: relative;
 }
 
 #pageContainer {
-    padding: 5%;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding: 0;
     z-index: 100;
     background-color: rgb(238, 237, 237);
 }
 
+#sideLogo, #loginCard {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
 #background {
     position: fixed; top: 0; left: 0; height: 100vh; z-index: -100;
 }
@@ -31,34 +36,27 @@
     border: none;
 }
 
-#loginCard {
-    // background-color: red;
-    -webkit-transition: all 2s ease-in;
-    -moz-transition: all 2s ease-in;
-    -ms-transition: all 2s ease-in;
-    -o-transition: all 2s ease-in;
-    transition: all 2s ease-in
-}
+
 
 .input-group:focus-within {
     .form-control, .input-group-text{
         box-shadow: 2px 3px 5px gray;
         border: 1px solid lightgray;
-        -webkit-transition: all .5s ease-out;
-        -moz-transition: all .5s ease-out;
-        -ms-transition: all .5s ease-out;
-        -o-transition: all .5s ease-out;
-        transition: all .5s ease-out
+        -webkit-transition: box-shadow .5s ease-out;
+        -moz-transition: box-shadow .5s ease-out;
+        -ms-transition: box-shadow .5s ease-out;
+        -o-transition: box-shadow .5s ease-out;
+        transition: box-shadow .5s ease-out
     
 }
 }
 
 .form-control, .input-group-text{
-    -webkit-transition: all .5s ease-out;
-    -moz-transition: all .5s ease-out;
-    -ms-transition: all .5s ease-out;
-    -o-transition: all .5s ease-out;
-    transition: all .5s ease-out
+    -webkit-transition: box-shadow .5s ease-out;
+    -moz-transition: box-shadow .5s ease-out;
+    -ms-transition: box-shadow .5s ease-out;
+    -o-transition: box-shadow .5s ease-out;
+    transition: box-shadow .5s ease-out
 
 }
 
@@ -66,3 +64,15 @@
 #inputForm {
     margin-top: 10%;
 }
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+@include media-breakpoint-up(md) {
+    #pageContainer {
+        padding: 5%;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+  }

@@ -1,15 +1,19 @@
 <div class="container-fluid h-100" id="pageContainer">
     <div class="card h-100 w-100" id="mainCard">
         <div class="container-fluid h-100">
-            <div class="row h-100 w-100">
-                <div class="col-md-5 d-flex align-items-center h-100" id="sideContainer">
-                    <div class="container text-center">
-                        <span id="logoIcon" class="text-white"><i class="bi bi-person-fill"></i></span>
+            <div class="row h-100">
+                <div class="col-md-5  h-100 d-none d-lg-flex" id="sideContainer">
+                    <div id="circle"></div>
+                    <div class="container text-center h-50" id="sideLogo">
+                        
+                        <!-- <span id="logoIcon" class="text-white"><i class="bi bi-person-fill"></i></span> -->
+                        <img src="assets/images/logo.png" alt="">
+                    
                         <span><h1 class="text-white">Employee Management System</h1></span>
                     </div>
                 </div>
-                <div class="col-md-7 d-flex align-items-center" id="mainContainer">
-                    <div class="mx-auto my-auto w-75 h-75" id="loginCard">
+                <div class="col-md-7" id="mainContainer">
+                    <div class="mx-auto w-100 px-md-5" id="loginCard">
                         <div class="container text-center" id="loginText">
                             <span><h1>Log In</h1></span>
                         </div>
@@ -26,7 +30,7 @@
                                 
                             </div>
                             <span class="float-end mt-3">Forgot Password?</span>
-                            <button class="btn btn-primary w-100 mt-5 p-2 text-white">{{"Login" |uppercase}}</button>
+                            <button [routerLink]="'/dashboard'" class="btn btn-primary w-100 mt-5 p-2 text-white">{{"Login" |uppercase}}</button>
                             
                         </div>
                     </div>
