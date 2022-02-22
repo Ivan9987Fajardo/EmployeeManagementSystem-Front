@@ -1,0 +1,21 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+$custom-colors : (
+    "custom-1": #1D3C78,
+    "custom-2": #2851A3,
+    "custom-3": #1877F2,
+    "custom-4": #77A7FF,
+    "custom-5": #AAC9FF
+);
+
+$colors: map-merge($colors, $custom-colors);
+
+$theme-colors: (
+    "primary": map-get($colors, "custom-1" )
+);
+
+
+@import '~bootstrap/scss/bootstrap';
